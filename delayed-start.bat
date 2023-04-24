@@ -1,21 +1,8 @@
-# Delayed Start Script
+::   About: Script to delay start of X processes by Y seconds
+::  Author: Qulle
+::    Date: 2023-04-24
+:: Version: 1.0.0
 
-## About
-Script to delay start of X processes by Y seconds
-
-## Configuration
-The script has a set of configurable parameters located in the top of the file. Setting these values should be enough to get it up and running. 
-```bat
-set /a enable_event_logging=1
-set /a enable_stack_tracing=1
-set /a delayed_start_time=60*2
-set delayed_processes=explorer.exe notepad.exe
-```
-
-**Note:** Logging to the Windows Event Log might require admin privileges.
-
-The full script is displayed below.
-```bat
 :: Script init
 @echo off
 setlocal enabledelayedexpansion
@@ -79,7 +66,3 @@ exit /b 0
 
 endlocal
 exit /b 0
-```
-
-## Author
-[Qulle](https://github.com/qulle/)
